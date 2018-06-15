@@ -30,19 +30,20 @@ def neuralNet(X, Y):
 
 
 def plot(history):
+    plt.subplot(1, 2, 1)
     plt.plot(history.history['acc'])
     plt.plot(history.history['val_acc'])
-    plt.title('model accuracy')
-    plt.ylabel('accuracy')
-    plt.xlabel('epoch')
+    plt.title('Accuracy vs Epoch')
+    plt.ylabel('Accuracy')
+    plt.xlabel('Epoch')
     plt.legend(['train', 'test'], loc='lower right')
-    plt.show()
 
+    plt.subplot(1, 2, 2)
     plt.plot(history.history['loss'])
     plt.plot(history.history['val_loss'])
-    plt.title('model loss')
-    plt.ylabel('loss')
-    plt.xlabel('epoch')
+    plt.title('Loss vs Epoch')
+    plt.ylabel('Loss')
+    plt.xlabel('Epoch')
     plt.legend(['train', 'test'], loc='upper right')
     plt.show()
 
